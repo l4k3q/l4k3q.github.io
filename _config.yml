@@ -1,0 +1,50 @@
+# ============================================================
+# 站点配置  —— 改这里定制你的博客
+# ============================================================
+
+# 站点标题（浏览器标签页、首页大标题）
+title: "My Blog"
+# 首页大标题下面的一行副标题 / 简介
+description: "Developer. Security Researcher. Agent Architect"
+
+author:
+  name: "l4k3q"         # 你的名字 / 网名
+  github: "l4k3q"   # <-- TODO: 改成你的 GitHub 用户名（首页 GitHub 图标链接用）
+
+# <-- TODO: 把 YOUR-USERNAME 改成你的 GitHub 用户名（RSS 和分享链接用）
+url: "https://l4k3q.github.io"
+baseurl: ""
+
+# 文章链接格式：
+#   文件 _posts/2026-08-12-my-first-post.md -> 链接 /posts/my-first-post/
+# （和 citrusice.github.io 的链接格式一致）
+permalink: /posts/:slug/
+
+timezone: Asia/Shanghai
+lang: zh-CN
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 首页文章摘要取文章第一段
+excerpt_separator: "\n\n"
+
+plugins:
+  - jekyll-feed        # 自动生成 /feed.xml（RSS 订阅，和 citrusice 一样）
+
+# 所有文章默认使用 post 布局
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

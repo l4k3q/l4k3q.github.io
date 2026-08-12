@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<ul class="posts">
+	{% for post in site.posts %}
+	<li>
+		<div class="post-meta">
+			<a class="post-link" href="{{ post.url | relative_url }}">
+				<h2 class="post-title">{{ post.title | escape }}</h2>
+			</a>
+			<div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+		</div>
+		<div class="post-excerpt">{{ post.excerpt | strip_html | escape | truncate: 200 }}</div>
+	</li>
+	{% endfor %}
+</ul>
