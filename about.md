@@ -4,9 +4,16 @@ title: About
 permalink: /about/
 ---
 
-你好，我是 **Your Name**。← 改成你自己的介绍
+Hello, I'm **lakeq li**, and nice to meet u here.
 
-这里写关于你的内容：做什么的、关注什么方向、怎么联系你。
+Welcome to my home.
 
-- GitHub: [github.com/YOUR-USERNAME](https://github.com/YOUR-USERNAME)
-- Email: you@example.com
+喜欢的话，留下来看看吧~
+
+**Contact:**
+
+- Github: `github.com/l4k3q`
+
+- Email: `l4k3q@qq.com`
+
+  
