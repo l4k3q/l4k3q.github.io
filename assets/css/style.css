@@ -108,6 +108,23 @@ article.post .post-date { font-size: 14px; }
 	color: #666;
 	margin-left: 8px;
 }
+a.tag { text-decoration: none; }
+a.tag:hover { background: #e4ecf7; color: #2563b0; }
+
+/* 首页置顶标记 */
+.pin-badge {
+	display: inline-block;
+	vertical-align: 3px;
+	background: #e9f1fc;
+	color: #2563b0;
+	border: 1px solid #c9dbf3;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.5;
+	padding: 0 7px;
+	margin-right: 8px;
+}
 
 .post-content h2 { margin-top: 1.6em; padding-bottom: 0.3em; border-bottom: 1px solid #eee; }
 .post-content h3 { margin-top: 1.4em; }
@@ -169,6 +186,21 @@ pre code, .highlight code { background: none; padding: 0; font-size: 0.85em; }
 
 /* ---------- 普通页面（About 等） ---------- */
 .page-title { font-size: 28px; color: #111; }
+
+/* ---------- Tags 归档页 ---------- */
+.tag-cloud { line-height: 2.4; }
+.tag-cloud .tag { margin-left: 0; margin-right: 8px; display: inline-block; }
+
+.tag-heading {
+	margin-top: 42px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eee;
+	font-size: 20px;
+}
+
+ul.posts-by-tag { list-style: none; margin: 12px 0 0; padding: 0; }
+ul.posts-by-tag li { margin: 8px 0; }
+ul.posts-by-tag .post-date { display: inline-block; width: 110px; margin: 0; }
 
 /* ---------- 页脚 ---------- */
 .site-footer {

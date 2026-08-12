@@ -1,14 +1,18 @@
 ---
 layout: default
 ---
+{% comment %}置顶文章（front matter 里写了 pin: true）排在最前面，其余按日期倒序{% endcomment %}
+{% assign pinned = site.posts | where: "pin", true %}
+{% assign others = site.posts | where_exp: "post", "post.pin != true" %}
+{% assign posts = pinned | concat: others %}
 <ul class="posts">
-	{% for post in site.posts %}
+	{% for post in posts %}
 	<li>
 		<div class="post-meta">
 			<a class="post-link" href="{{ post.url | relative_url }}">
-				<h2 class="post-title">{{ post.title | escape }}</h2>
+				<h2 class="post-title">{% if post.pin %}<span class="pin-badge">置顶</span>{% endif %}{{ post.title | escape }}</h2>
 			</a>
-			<div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+			<div class="post-date">{{ post.date | date: "%b %-d, %Y" }}{% for tag in post.tags %} <a class="tag" href="{{ '/tags/#' | append: tag | relative_url }}">{{ tag | escape }}</a>{% endfor %}</div>
 		</div>
 		<div class="post-excerpt">{{ post.excerpt | strip_html | escape | truncate: 200 }}</div>
 	</li>

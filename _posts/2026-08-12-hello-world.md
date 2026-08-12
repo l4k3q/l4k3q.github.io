@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-categories:
+tags:
   - misc
 ---
 第一篇文章~
