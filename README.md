@@ -170,7 +170,8 @@ bundle exec jekyll serve
 | 颜色/字体/布局 | `assets/css/style.css` |
 | About 页内容 | `about.md` |
 | 回到顶部按钮 | 已内置（滚动超一屏自动出现），样式在 `assets/css/style.css` 的 `.back-to-top` |
-| 访问量统计 | 去 goatcounter.com 注册，解开 `_includes/head.html` 里的注释 |
+| 版权/授权声明 | 页脚 `_includes/footer.html` 的 `.license` 行 + `about.md` 的 License 节（当前为 CC BY-NC-SA 4.0）|
+| 访问量统计 | 已启用 GoatCounter，统计面板：https://l4k3q.goatcounter.com（代码在 `_includes/head.html`）|
 | 评论系统 | 推荐 [giscus](https://giscus.app/zh-CN)（基于 GitHub Discussions），把生成的 script 贴进 `_layouts/post.html` |
 
 ## 绑定自己的域名（可选）
