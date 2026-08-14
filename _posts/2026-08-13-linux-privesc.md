@@ -6,7 +6,7 @@ tags:
 date: 2026-08-13 22:16:00 +0800 # 可选：覆盖文件名里的日期
 ---
 
-![cover](D:\blog\images\cover.png)
+![cover](/images/cover.png)
 
 # 内网渗透 — Linux 提权
 
@@ -23,7 +23,7 @@ date: 2026-08-13 22:16:00 +0800 # 可选：覆盖文件名里的日期
 
 ## 一、提权方法总览
 
-![1](D:\blog\images\1.png)
+![1](/images/1.png)
 
 **权限提升（Privilege Escalation）** 指从低权限账户（Web 服务用户、普通用户）获取更高权限（通常为 root）的过程，分为两类：
 
@@ -56,7 +56,7 @@ date: 2026-08-13 22:16:00 +0800 # 可选：覆盖文件名里的日期
 
 ## 二、开始之前 — 基础信息收集
 
-![2](D:\blog\images\2.png)
+![2](/images/2.png)
 
 进入目标主机后（如通过 Webshell / 反弹 shell），先进行基础信息收集，为选择提权路径做准备。**核心目标**：搞清楚内核/发行版版本（用于搜内核 EXP）、以 root 运行的服务、带特殊权限的文件、以及任何可写入的关键位置。
 
@@ -203,7 +203,7 @@ bash /tmp/lp.sh | tee /tmp/lp.out
 
 ## 三、内核提权
 
-![3](D:\blog\images\3.png)
+![3](/images/3.png)
 
 **原理**：利用已知的内核自身漏洞（本地越界、竞态、UAF 等）实现本地提权，多为"通杀"型。大多数内核漏洞可通过 `uname -r` 得到的内核版本号快速比对。
 
@@ -294,7 +294,7 @@ su root                                  # 切换为 root
 
 ## 四、SUID 提权
 
-![4](D:\blog\images\4.png)
+![4](/images/4.png)
 
 ### 4.1 原理
 
@@ -408,7 +408,7 @@ strings /etc/shadow
 
 ## 五、Sudo 提权
 
-![5](D:\blog\images\5.png)
+![5](/images/5.png)
 
 一旦攻击者能以某个用户身份使用 SUDO（尤其是配置了 NOPASSWD 的情形），基本等于可以以 root 权限执行任意命令。
 
@@ -516,7 +516,7 @@ sudoedit /etc/sudoers        # 需要 sudoers 里有 sudoedit 条目
 
 ## 六、第三方服务提权
 
-![6](D:\blog\images\6.png)
+![6](/images/6.png)
 
 当某些第三方服务**以 root 身份运行**且可被本地低权限用户访问时，借它执行的操作即为 root 权限。枚举入口：
 
@@ -655,7 +655,7 @@ chroot /mnt/root                  # 即宿主机根文件系统
 
 ## 七、其他常见提权方式
 
-![7](D:\blog\images\7.png)
+![7](/images/7.png)
 
 ### 7.1 计划任务（Cron）
 
@@ -741,7 +741,7 @@ grep -r "password" /var/www 2>/dev/null
 
 ## 八、提权工具汇总
 
-![8](D:\blog\images\8.png)
+![8](/images/8.png)
 
 | 阶段 | 工具 | 用途 |
 |------|------|------|
