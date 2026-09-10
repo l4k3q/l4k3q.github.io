@@ -5,8 +5,6 @@ tags:
 date: 2026-09-10 19:59:00 +0800 # 可选：覆盖文件名里的日期
 ---
 
-### 从 LLM 到 Agent：LangChain、LlamaIndex、Agent 与 Harness
-
 你是否接触过这些概念：**LLM、Tool、Agent、Agent Loop、Harness、LangChain、LangGraph、LlamaIndex**
 
 繁多的概念令我产生一个疑问：
