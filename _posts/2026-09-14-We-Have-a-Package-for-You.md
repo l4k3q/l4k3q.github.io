@@ -1,5 +1,5 @@
 ---
-title: "Package Hallucination 论文复现实验"
+title: "Package Hallucination 论文实验"
 tags:
   - ai
 date: 2026-09-14 22:34:00 +0800 # 可选：覆盖文件名里的日期
